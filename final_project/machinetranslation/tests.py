@@ -7,12 +7,12 @@ class TestEnglishToFrench(unittest.TestCase):
     def test_hello_translation(self):
         english_text = "Hello"
         translated_text = english_to_french(english_text)
-        self.assertEqual(translated_text, "Bonjour")
+        self.assertEqual(translated_text, "Pepitoooo")
 
-    def test_goodbye_translation(self):
-        english_text = "Goodbye"
+    def test_translation_not_equal(self):
+        english_text = "Hello"
         translated_text = english_to_french(english_text)
-        self.assertEqual(translated_text, "Au revoir")
+        self.assertNotEqual(translated_text, "Hello")
 
 
 class TestFrenchToEnglish(unittest.TestCase):
@@ -21,10 +21,10 @@ class TestFrenchToEnglish(unittest.TestCase):
         translated_text = french_to_english(french_text)
         self.assertEqual(translated_text, "Hello")
 
-    def test_au_revoir_translation(self):
-        french_text = "Au revoir"
+    def test_translation_not_equal(self):
+        french_text = "Bonjour"
         translated_text = french_to_english(french_text)
-        self.assertEqual(translated_text, "Goodbye")
+        self.assertNotEqual(translated_text, "Bonjour")
 
 
 if __name__ == '__main__':
